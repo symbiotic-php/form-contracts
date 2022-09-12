@@ -1,0 +1,13 @@
+{
+  "name": "symbiotic/form-contracts",
+  "require": {
+    "php": ">=8.0"
+  },
+  "license": "MIT",
+  "version": "1.4.0",
+  "autoload": {
+    "psr-4": {
+      "Symbiotic\\Form\\": "src/Form"
+    }
+  }
+}
