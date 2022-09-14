@@ -4,7 +4,7 @@
     "php": ">=8.0"
   },
   "license": "MIT",
-  "version": "1.4.0",
+  "version": "1.4.0.1",
   "autoload": {
     "psr-4": {
       "Symbiotic\\Form\\": "src/Form"
