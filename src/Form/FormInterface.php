@@ -22,6 +22,12 @@ interface FormInterface
      */
     public function getFields(): array;
 
+    /**
+     * @param string $name
+     *
+     * @return FillableInterface|null
+     */
+    public function getField(string $name):?FillableInterface;
 
     /**
      * @return string
@@ -45,23 +51,29 @@ interface FormInterface
     /**
      * @param array $data
      *
+     * @return $this
+     */
+    public function setValues(array $data): static;
+    /**
+     * @param array $values
+     *
      * @return FieldsValidator
      */
-    public function getValidator(array $data): FieldsValidator;
+    public function getValidator(array $values): FieldsValidator;
 
     /**
      * @param string $action
      *
      * @return FormInterface
      */
-    public function setAction(string $action): FormInterface;
+    public function setAction(string $action): static;
 
     /**
      * @param string $method
      *
      * @return FormInterface
      */
-    public function setMethod(string $method): FormInterface;
+    public function setMethod(string $method): static;
 
     /**
      * @param ViewFactory $viewFactory

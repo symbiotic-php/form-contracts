@@ -85,6 +85,13 @@ interface FillableInterface extends FieldInterface
     public function getValidators(): array;
 
     /**
+     * @param ValidatorInterface $validator
+     *
+     * @return $this
+     */
+    public function addValidator(ValidatorInterface $validator): static;
+
+    /**
      * @param string|array|null $value
      *
      * @return bool
