@@ -26,11 +26,6 @@ interface GroupInterface extends FieldInterface
     /**
      * @return string
      */
-    public function getName(): string;
-
-    /**
-     * @return string
-     */
     public function getTitle(): string;
 
     /**
@@ -40,13 +35,24 @@ interface GroupInterface extends FieldInterface
 
 
     /**
+     * @return bool
+     */
+    public function isMulti() : bool;
+
+    /**
      * @return FieldInterface[]
      */
-    public function getFields(): array;
+    public function getFields(): iterable;
+
+    /**
+     * @return array
+     */
+    public function getSubGroups():?array;
 
     /**
      * Collapsed fields
      * @return FieldInterface[]
      */
     public function getFieldsArray(): array;
+
 }

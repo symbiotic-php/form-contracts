@@ -9,13 +9,6 @@ interface FillableInterface extends FieldInterface
 {
 
     /**
-     * @param string $name
-     *
-     * @return FillableInterface
-     */
-    public function setName(string $name): static;
-
-    /**
      * @param string $label
      *
      * @return FillableInterface
@@ -48,11 +41,6 @@ interface FillableInterface extends FieldInterface
      * @return string
      */
     public function getName(): string;
-
-    /**
-     * @return string
-     */
-    public function getDotName(): string;
 
     /**
      * @return string

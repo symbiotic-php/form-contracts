@@ -32,6 +32,48 @@ interface FieldInterface extends \JsonSerializable, \Stringable
 
 
     /**
+     * Field name attribute
+     *
+     * @param string $name
+     *
+     * @return $this
+     */
+    public function setName(string $name): static;
+
+    /**
+     * Field name prefix
+     *
+     * @param string $prefix
+     *
+     * @return $this
+     */
+    public function setPrefix(string $prefix): static;
+
+
+    /**
+     * Returns only the name without the prefix
+     *
+     * @use getFullName() to get the full name
+     *
+     * @return string
+     */
+    public function getName(): string;
+
+    /**
+     * Return prefix and name
+     *
+     * @return string
+     */
+    public function getFullName(): string;
+
+    /**
+     * Returns prefix and name with dot syntax
+     *
+     * @return string
+     */
+    public function getDotName(): string;
+
+    /**
      * @param string|null $template
      *
      * @return string
@@ -45,4 +87,5 @@ interface FieldInterface extends \JsonSerializable, \Stringable
      * @return $this
      */
     public function setView(ViewFactory $viewFactory): static;
+
 }
