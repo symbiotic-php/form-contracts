@@ -20,7 +20,7 @@ interface GroupInterface extends FieldInterface
      *
      * @return $this
      */
-    public function setValues(array $data): static;
+    public function setValue(array $data): static;
 
 
     /**
